@@ -1,0 +1,29 @@
+/* Changed style */
+.DraftEditor-editorContainer{
+    background: white !important;
+    padding: 0px 20px;
+    min-height: 300px;
+}
+
+.rdw-editor-wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.rdw-image-modal{
+    left: -203px !important;
+}
+
+/* Added style */
+.texteditor-component{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editor-title{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 23px;
+}

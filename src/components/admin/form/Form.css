@@ -1,0 +1,18 @@
+::-webkit-inner-spin-button { 
+    display:none;
+  }
+  ::-webkit-calendar-picker-indicator { background-color:white}
+  input[type=date]{
+    font-size:20px;
+  }
+  ::-webkit-datetime-edit-text { color:#555555}
+  ::-webkit-datetime-edit-month-field { color:#555555 }
+  ::-webkit-datetime-edit-day-field { color: #555555; }
+  ::-webkit-datetime-edit-year-field { color:#555555; }
+  ::-webkit-calendar-picker-indicator{ 
+    background-image: url(http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Calendar-icon.png);
+        background-position:center;
+         background-size:20px 20px;
+         background-repeat:no-repeat;
+        color:rgba(204,204,204,0);
+  }

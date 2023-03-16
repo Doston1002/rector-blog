@@ -1,0 +1,23 @@
+.form-header {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-btn {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.active-btn {
+  color: white;
+  background: rgb(31 41 55 / 1)
+}
