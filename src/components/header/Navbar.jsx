@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between container mx-auto w-[90%]">
         <div className="w-1/6">
           <Link to="/">
-            <h2>REKTOR BLOGI</h2>
+          <h2> </h2>
             {/* <img src={logo} alt="" width={"150"} height={"20"} className="" /> */}
           </Link>
         </div>

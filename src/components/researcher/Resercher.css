@@ -1,0 +1,27 @@
+.researchInfo{
+    position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 97, 144, 0.9);
+padding: 20px;
+height: 100%;
+border-left: 4px solid #ED2025;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+-webkit-transform: translateY(75%);
+transform: translateY(75%);
+}
+.title{
+    color: #fff;
+font-size: 16px;
+font-weight: 700;
+margin-bottom: 24px;
+line-height: 2;
+}
+.desc p{
+    margin: 0 0 20px 0;
+}

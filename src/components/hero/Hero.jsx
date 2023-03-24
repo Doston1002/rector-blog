@@ -23,7 +23,7 @@ const Hero = () => {
   );
   const change = keyframes`
   0% {
-    background-image: ${images[5]};
+    background-image: ${`banner1`}};
   }
   20% {
     background-image: ${images[0]};
@@ -34,14 +34,13 @@ const Hero = () => {
   60% {
     background-image: ${images[2]};
   }
-  80% {
+  100% {
     background-image: ${images[3]};
   }
-  100% {
-    background-image: ${images[4]};
-  }
+
 `;
   const BgImages = styled.div`
+  
     width: 100vw;
     backgroundreapeat: no-repeat;
     animation: ${change} 20s infinite;
@@ -50,7 +49,7 @@ const Hero = () => {
   return (
     <BgImages
       id="hero-bg"
-      className="mx-auto bg-hero bg-origin-content bg-no-repeat bg-cover  w-full h-[800px] sm:h-[300px] md:h-[500px] xl:h-[800px] 2xl:h-screen border"
+      className="mx-auto bg-hero bg-origin-content bg-no-repeat bg-cover  w-full h-[800px] sm:h-[300px] md:h-[500px] xl:h-[800px] 2xl:h-screen border "
     >
       {/* HERO TEXT */}
       <div className="  mx-auto container w-[90%] flex items-center gap-10 box-border mt-24 xl:flex-row flex-col-reverse">
