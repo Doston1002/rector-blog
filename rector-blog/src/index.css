@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@500;700&display=swap");
+body {
+  height: 100%;
+  min-height: 100vh;
+  min-width: 375px;
+}
+/* Firefox */
+* {
+  scrollbar-width: 0px;
+  /* scrollbar-color: var(--secondary) var(--primary); */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  /* background: #000 ;
+    border-radius: 0px */
+}
+
+*::-webkit-scrollbar-thumb {
+  /* background:  #F06D06;
+    border-radius: 10px; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+/* For Navbar */
+.bg-language-btn, .footer-text {
+  background: rgba(255, 255, 255, 0.6);
+}
+/* For Navbar */
+
+/* For Hero section */
+.bg-hero {
+  background-image: url("./assets/images/bg-image.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.bg-img {
+  background-image: url("./assets/images/egamnazar.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+/* For Hero section */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+      font-family: Public Sans, system-ui, sans-serif;
+    }
+  }

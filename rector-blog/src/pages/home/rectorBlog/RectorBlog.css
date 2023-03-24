@@ -1,0 +1,76 @@
+.blog-of-rector {
+    display: flex;
+    height: 550px;
+  }
+  
+  .picture-of-rector {
+    position: relative;
+    width: 50%;
+  }
+  
+  .layer-0 {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    bottom: 0;
+    right: 0;
+    background: #1c244f;
+    opacity: 0.1;
+  }
+  
+  .layer-1 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    bottom: 100px;
+    right: 50px;
+    background: #003b48;
+  }
+  
+  .layer-2 {
+    position: absolute;
+    bottom: 50px;
+    right: 130px;
+    width: 500px;
+    height: 400px;
+  }
+  
+  .layer-2 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .note-of-rector {
+    width: 50%;
+    padding: 60px 10px 10px 30px;
+  }
+  
+  .note-of-rector h3{
+    font-size: 30px;
+  }
+  
+  .note-of-rector h3 + p{
+    line-height: 30px;
+    font-size: 20px;
+    width: 90%;
+  }
+  
+  .note-of-rector p + p {
+    font-family: "Duru Sans", sans-serif;
+    font-family: "Waterfall", cursive;
+    font-size: 80px;
+  }
+  
+  .note-of-rector button {
+    border: none;
+    background: none;
+    margin-top: 20px;
+    margin-left: 80%;
+    padding: 8px 15px;
+    border: 2px inset black;
+    border-radius: 8px;
+  }
+  
+  .blog-of-rector button{
+    cursor: pointer;
+  }
