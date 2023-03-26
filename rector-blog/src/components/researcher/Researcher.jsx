@@ -10,7 +10,7 @@ const Researcher = () => {
   const { t } = useTranslation();
   return (
     
-      <div className="container ">
+      <div className="container w-[90%] mx-auto">
         <div className=" lg:flex items-center mx-auto lg:justify-between w-[90%] my-5 ">
         <h3 className="font-semibold lg:text-3xl">{t("ResearcherOnline.statistics")}</h3>
        
