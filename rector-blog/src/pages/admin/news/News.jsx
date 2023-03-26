@@ -20,9 +20,9 @@ const News = () => {
     let categoryName = "";
     return (categoryName =
       category === "a"
-        ? "So'ngi yangiliklar"
+        ? "Yangiliklar"
         : category === "b"
-        ? "Dolzarb yangiliklar"
+        ? "Ilmiy tadqiqotlar"
         : category === "c"
         ? "Foto yangiliklar"
         : "Video yangiliklar");
@@ -129,10 +129,10 @@ const News = () => {
         />
       )}
       <FormHeader
-        title="Yangiliklar"
+        title="Malumot kiritish"
         event2="Qo'shish"
         handleEvent2={() => setStatus("create")}
-        event1="Barcha yangililar"
+        event1="Barchasi"
         handleEvent1={() => setStatus("read")}
       />
       {content}

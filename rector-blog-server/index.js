@@ -17,6 +17,7 @@ app.use('/api/news',require('./router/YangilikRoutes'))
 app.use('/api/photo',require('./router/photoroutes'))
 app.use('/api/banner',require('./constroller/banner/route'))
 app.use('/api/media',require('./router/media'))
+app.use('/api/application',require('./router/application'))
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 

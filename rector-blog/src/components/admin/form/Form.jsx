@@ -32,7 +32,7 @@ const Form = ({ title, body, category, date, id }) => {
   return (
     <form className="flex flex-col gap-10" onSubmit={postData}>
       <div className="flex flex-col">
-        <label htmlFor="titleUz">Yangilik mavzusi UZB</label>
+        <label htmlFor="titleUz">Sarlavha UZB</label>
         <input
           required
           className=" rounded-lg p-2 border border-slate-600"
@@ -44,7 +44,7 @@ const Form = ({ title, body, category, date, id }) => {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="titleRu">Yangilik mavzusi RUS</label>
+        <label htmlFor="titleRu">Sarlavha RUS</label>
         <input
           required
           className=" rounded-lg p-2 border border-slate-600"
@@ -56,7 +56,7 @@ const Form = ({ title, body, category, date, id }) => {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="titleEn">Yangilik mavzusi ING</label>
+        <label htmlFor="titleEn">Sarlavha ING</label>
         <input
           required
           className=" rounded-lg p-2 border border-slate-600"
@@ -69,9 +69,9 @@ const Form = ({ title, body, category, date, id }) => {
 
       <TextEditor
         title={{
-          uz: "Yangilik haqida batafsil UZB",
-          ru: "Yangilik haqida batafsil RUS",
-          en: "Yangilik haqida batafsil ING",
+          uz: "Batafsil malumot UZB",
+          ru: "Batafsil malumot RUS",
+          en: "Batafsil malumot ING",
         }}
         name={{ uz: "body_uz", ru: "body_ru", en: "body_en" }}
         value={{
@@ -89,7 +89,7 @@ const Form = ({ title, body, category, date, id }) => {
       <div className="flex justify-between">
         <div className="flex flex-col">
           <label htmlFor="photo" className="mb-2">
-            Yangilik mavzusi uchun poster
+            Poster
           </label>
           <input
             required
@@ -101,7 +101,7 @@ const Form = ({ title, body, category, date, id }) => {
 
         <div className="flex flex-col">
           <label htmlFor="category" className="mb-2">
-            Yangilik tipini yanlang
+            Tipini yanlang
           </label>
           <select
             name="category"
@@ -112,16 +112,16 @@ const Form = ({ title, body, category, date, id }) => {
             <option value="" hidden>
               ...
             </option>
-            <option value="a">So`ngi yangiliklar</option>
-            <option value="b">Dolzarb yangiliklar</option>
-            <option value="c">Foto yangiliklar</option>
-            <option value="d">Video yangiliklar</option>
+            <option value="a">Yangiliklar</option>
+            <option value="b">Ilmiy tadqiqot</option>
+            {/* <option value="c">Foto yangiliklar</option>
+            <option value="d">Video yangiliklar</option> */}
           </select>
         </div>
 
         <div className="flex flex-col">
           <label htmlFor="date" className="mb-2">
-            Yangilik vaqtini kiriting
+            Vaqtini kiriting
           </label>
           <input
             id="date"

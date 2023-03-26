@@ -53,6 +53,14 @@ class Validate{
         phone: joi.string().min(3).required(),
         password: joi.string().min(3).required(),
     })
+
+    postApplicaton = joi.object().keys({
+        name: joi.string().min(5).required(),
+        tel: joi.string().min(5).required(),
+        email: joi.string().min(5).required(),
+        type: joi.string().min(5).required(),
+        body: joi.string().min(100).required(),
+    })
 }
 
 module.exports = new Validate;
