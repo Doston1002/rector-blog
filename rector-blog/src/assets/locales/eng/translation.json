@@ -1,0 +1,27 @@
+{
+  "Header": {
+    "lastNews": "Latest news",
+    "actualNews": "Actual news",
+    "photoNews": "Photo news",
+    "videoNews": "Video news"
+  },
+  "Footer": {
+    "info": "Certificate: #0987. Issued date: 22.06.2015. Founder: “WEB EXPERT” LLC. Editorial address: 12, K. Yormatov street, Tashkent city, 100043. </br> Email address: info@kun.uz. </br> The opinions expressed in the author's articles published on the site belong to the author and they may not represent the opinion of the editorial staff of Kun.uz. </br> This symbol placed on articles and materials indicates that they are published on the basis of commercial and advertising rights."
+  },
+  "Hero": {
+    "motto": "A real journalist should be awake... a real journalist should be conscientious...",
+    "description": "Today there is a social network user who thinks he is a journalist. But I consider a journalist to be a person who sorts out various fake and credible information and delivers reliable information in the information space."
+  },
+  "NewsCard": {
+    "title": "{{news_card_title}}"
+  },
+  "RecommendContent": {
+    "title0": "{{recommend_content_title0}}",
+    "title": "{{recommend_content_title}}",
+    "button": "More news"
+  },
+  "MoreDetails": {
+    "title": "{{more_details_title}}",
+    "body": "{{more_details_body}}"
+  }
+}
