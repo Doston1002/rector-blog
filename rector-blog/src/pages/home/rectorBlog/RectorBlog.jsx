@@ -3,7 +3,7 @@ import Rector from "../../../assets/images/Rector.png";
 import './RectorBlog.css'
 const RectorBlog = () => {
   return (
-    <div className="blog-of-rector">
+    <div className={`"blog-of-rector container  mx-auto w-[90%] my-10 flex xl:flex-row flex-col gap-10"`}>
         <div className="picture-of-rector">
           <div className="layer-0"></div>
           <div className="layer-1"></div>
@@ -11,7 +11,7 @@ const RectorBlog = () => {
             <img src={Rector} alt="rectorni rasmi" />
           </div>
         </div>
-        <div className="note-of-rector">
+        <div className="note-of-rector md:w-[100vw]">
           <h3>
             "Ta'lim - bu dunyoni o'zgartirish uchun <br /> ishlatishingiz mumkin
             bo'lgan eng kuchli quroldir."
@@ -27,7 +27,7 @@ const RectorBlog = () => {
             bilimga intilganlar o'rtasida aniq farq bor.
           </p>
 
-          <p>Sidikov Akmal Abdikaxarovich</p>
+          <p className="text-4xl">Usmonov Botir Shukurillayevich</p>
 
           <button>Rektor blogi</button>
         </div>
