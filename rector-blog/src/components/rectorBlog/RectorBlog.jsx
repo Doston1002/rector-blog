@@ -1,5 +1,5 @@
 import React from 'react'
-import Rector from "../../../assets/images/Rector.png";
+import Rector from "../../assets/images/Rector.png";
 import './RectorBlog.css'
 const RectorBlog = () => {
   return (

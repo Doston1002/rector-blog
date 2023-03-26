@@ -17,7 +17,7 @@ import {
 
 import { imgPrefix } from "../../context/provider";
 import { newsActions, UsersContext } from "../../context";
-import RectorBlog from "./rectorBlog/RectorBlog";
+import RectorBlog from "../../components/rectorBlog/RectorBlog";
 import Chart from "../../components/chart/Chart";
 import Chartjs from "../../components/researcher/Researcher";
 
@@ -104,11 +104,11 @@ const Home = () => {
       {/* Image Gallary */}
       <div className="container mx-auto w-[90%] my-10">
         <h1 className=" mt-14 mb-4 font-semibold text-3xl">
-          {t("Header.photoNews")}
+          {t("Header.research")}
         </h1>
         <div className=" w-full flex flex-col gap-5 ">
           {news
-            .filter((item) => item.category === "a")
+            .filter((item) => item.category === "b")
             .slice(0, 3)
             .map((subItem) => (
               <NewsCard

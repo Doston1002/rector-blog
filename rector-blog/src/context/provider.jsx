@@ -178,7 +178,7 @@ export const UsersProvider = ({ children }) => {
     // About Banner
 
     // About Photo News
-    getPhotos: async (url) => {
+    getApplication: async (url) => {
       setIsLoading(true);
       const data = (
         await fetch(`${baseUrl}/${url}`, { headers: config })
@@ -199,7 +199,7 @@ export const UsersProvider = ({ children }) => {
     
     },
 
-    addPhotos: async (body, url) => {
+    addApplication: async (body, url) => {
       setIsLoading(true);
       const data = (
         await fetch(`${baseUrl}/${url}`, {
@@ -223,7 +223,7 @@ export const UsersProvider = ({ children }) => {
       }, 3000); 
     },
 
-    deletePhotos: async (id) => {
+    deleteApplication: async (id) => {
       setIsLoading(true)
       const data = (
         await fetch(`${baseUrl}/photo/${id}`, {
