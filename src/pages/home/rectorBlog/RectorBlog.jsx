@@ -3,7 +3,7 @@ import Rector from "../../../assets/images/Rector.png";
 import './RectorBlog.css'
 const RectorBlog = () => {
   return (
-    <div className={`"blog-of-rector container    md:block md:w-[100%] lg:w-[100vw]  lg:flex 2xl:w-[100vw]"`}>
+    <div className={`"blog-of-rector container  mx-auto w-[90%] my-10 flex xl:flex-row flex-col gap-10"`}>
         <div className="picture-of-rector">
           <div className="layer-0"></div>
           <div className="layer-1"></div>

@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <header
       className={`py-4 ${
-        scrollValue > 0 || pathname !== "/" ? "bg-black " : "backdrop-blur-2xl"
+        scrollValue > 0 || pathname !== "/" ? "bg-blue-800" : "backdrop-blur-2xl"
       }
        text-white  transition-opacity ${
          pathname === "/" ? "absolute w-full" : ""

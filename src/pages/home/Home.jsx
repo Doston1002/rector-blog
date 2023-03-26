@@ -20,6 +20,7 @@ import { imgPrefix } from "../../context/provider";
 import { newsActions, UsersContext } from "../../context";
 import RectorBlog from "./rectorBlog/RectorBlog";
 import Chart from "../../components/chart/Chart";
+import Chartjs from "./Chartjs";
 
 function Accordion({ title, content, isActive, onClick }) {
   const [open, setOpen] = useState(isActive);
@@ -220,7 +221,8 @@ const Home = () => {
         </div>
         <div className=" md:w-1/3 w-full h-[580px] ">
           <div>
-              <img src={ChartImg} alt="" width={"600"} height={"20"} className="mx-4 my-6" />
+            <Chartjs />
+              {/* <img src={ChartImg} alt="" width={"600"} height={"20"} className="mx-4 my-6" /> */}
             
           </div>
         </div>
