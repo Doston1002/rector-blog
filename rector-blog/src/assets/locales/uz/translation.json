@@ -1,9 +1,31 @@
 {
   "Header": {
-    "lastNews": "Rektor haqida",
-    "actualNews": "Yangiliklar",
-    "photoNews": "Ilmiy tadqiqotlar",
-    "videoNews": "TKTI.uz"
+    "about": "Rektor haqida",
+    "news": "Yangiliklar",
+    "research": "Ilmiy tadqiqotlar",
+    "reception": "Virtual qabulxona"
+  },
+  "Researcher":{
+    "title":"Virtual Qabulxona",
+    "FIO":"F.I.O",
+    "phone":"Telefon raqam",
+    "email":"Elektron pochta",
+    "applicationType":"Murojaat turi",
+    "applicationType1":"Murojaat",
+    "applicationType2":"Shikoyat",
+    "applicationType3":"Talabnoma",
+    "applicationType4":"Rahbariyatning shaxsiy qabuliga yozuv",
+    "applicationType5":"Sayt ma’muriyatiga murojaat",
+    "applicationTypeDesc":"Murojaat matni",
+    "file-upload":"File yuborish",
+    "send":"yuborish"
+  },
+  "ResearcherOnline":{
+"statistics":"ARIZALAR STATISTIKASI",
+"Received":"Kelib tushgan arizalar",
+"Accepted":"Qabul qilinganlar",
+"Rejected":"Rad etilganlar",
+"review":"Ko'rib chiqilayotganlar"
   },
   "Footer": {
     "info": "Guvohnoma: №0987. Berilgan sanasi: 22.06.2015-yil. Muassis: “WEB EXPERT” MCHJ. Tahririyat manzili: 100043, Toshkent shahri, K. Yormatov koʻchasi, 12-uy. </br> Elektron manzil: info@kun.uz. </br>  Saytda eʼlon qilinayotgan mualliflik maqolalarida keltirilgan fikrlar muallifga tegishli va ular Kun.uz tahririyati nuqtai nazarini ifoda etmasligi mumkin. </br>  Maqola va materiallarda qo‘yilgan mazkur belgi ularning tijorat va reklama huquqlari asosida eʼlon qilinganligini bildiradi."
@@ -23,4 +45,5 @@
     "title": "{{more_details_title}}",
     "body": "{{more_details_body}}"
   }
+  
 }

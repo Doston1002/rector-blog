@@ -80,28 +80,28 @@ const Navbar = () => {
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.lastNews")}
+            {t("Header.about")}
           </Link>
           <Link
             // to={`${i18next.language}/actual-news`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.actualNews")}
+            {t("Header.news")}
           </Link>
           <Link
             // to={`${i18next.language}/photo-news`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.photoNews")}
+            {t("Header.research")}
           </Link>
           <Link
-            // to={`${i18next.language}/video-news`}
+            to={`${i18next.language}/virtual-qabulxona`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.videoNews")}
+            {t("Header.reception")}
           </Link>
           <div className="max-xl:flex gap-4 hidden pl-14 mt-8">
             {" "}

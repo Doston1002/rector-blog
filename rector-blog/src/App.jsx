@@ -15,6 +15,7 @@ import {
   LatestNews,
   ActualNews,
   VideoNews,
+  Researcher,
   PhotoNews,
   FourZeroFour,
   Dashboard,
@@ -83,14 +84,14 @@ function App() {
             }
           />
           <Route
-            path={`:lang/video-news`}
+            path={`:lang/virtual-qabulxona`}
             element={
               <Suspense
                 fallback={[...Array(10).keys()].map((i) => (
                   <SkeletonPost key={i} />
                 ))}
               >
-                <VideoNews />
+                <Researcher />
               </Suspense>
             }
           />

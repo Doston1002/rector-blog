@@ -16,7 +16,7 @@ const ActualNews = () => {
   return (
     <div className="w-full">
       <h1 className="container mx-auto w-[90%] my-10 font-semibold text-3xl">
-       {t("Header.actualNews")}
+       {t("Header.actualNews")} wedfwd
       </h1>
 
       <div className="container mx-auto w-[90%] flex justify-between gap-5 lg:flex-row flex-col">

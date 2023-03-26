@@ -16,34 +16,32 @@ const ShortInfoCard = ({
   img,
   dateProps,
   title,
-  body,
-  video,
-  inner
+
 }) => {
   const {t} = useTranslation()
   return (
     <Link to={`/${i18next.language}/news/details/${category}/${endpoint}`}>
-      <div className={`flex rounded-xl  border-red-900 ${inner ? "gap-5 sm:flex-row flex-col " : "flex-col w-[100%] md:w-56 lg:w-72 xl:w-[380] 2xl:w-[430px]"}`}>
-        <div className={`relative`}>
+      <div >
+      
+      </div>
+      <div className={`lg:flex-col h-[300px] lg:justify-between rounded-xl   border border-red-900 `}>
+        <div className={``}>
+          
           <LazyLoadImage
             src={img}
             alt={`Image Alt`}
-            className={`img-lazy ${inner ? "sm:w-60 sm:h-44 w-full h-auto" : "w-full h-full "} rounded-xl`}
+            className={``}
             placeholderSrc={placeholder}
-            effect="blur" // opacity | black-and-white
+            effect="blur" 
           />
-          {video && (
-            <span className="glightbox_video">
-              <span className={`${inner ? "play-btn-inner" : "play-btn"}`} href="#"></span>
-            </span>
-          )}
+          
         </div>
-        <div className={`${inner ? "w-4/6" : ""}`}>
+        <div className={``}>
           <div className="flex items-center gap-2 ">
             <CalendarIcon />{" "}
             <span>{dateProps}</span>
-          </div>
-          <p className={`font-bold mt-2 ${inner ? "xl:text-xl lg:text-lg text-sm" : "news-title"} `}>
+          </div >
+          <p className={`font-bold mt-2`}>
             {t("NewsCard.title", {news_card_title: title})}
           </p>
         </div>
