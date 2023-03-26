@@ -27,7 +27,7 @@ const RectorBlog = () => {
             bilimga intilganlar o'rtasida aniq farq bor.
           </p>
 
-          <p>Sidikov Akmal Abdikaxarovich</p>
+          <p className="text-4xl">Usmonov Botir Shukurillayevich</p>
 
           <button>Rektor blogi</button>
         </div>

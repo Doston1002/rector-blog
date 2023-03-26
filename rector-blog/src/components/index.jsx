@@ -6,6 +6,7 @@ const Footer = lazy(() => import("./footer/Footer"));
 const Layout = lazy(() => import("./layout/Layout"));
 const AdminLayout = lazy(() => import("./layout/AdminLayout"));
 const NewsCard = lazy(() => import("./news_card/NewsCard"));
+
 const Researcher = lazy(()=> import ("./researcher/Researcher"))
 const ImageGalary = lazy(() => import("./image_galary/ImageGalary"));
 const MoreDetails = lazy(() => import("./more_details/MoreDetails"));
