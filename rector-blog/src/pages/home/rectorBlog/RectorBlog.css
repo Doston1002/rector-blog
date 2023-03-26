@@ -1,11 +1,11 @@
 .blog-of-rector {
-    display: flex;
-    height: 550px;
+
+  
   }
   
   .picture-of-rector {
     position: relative;
-    width: 50%;
+    
   }
   
   .layer-0 {
@@ -41,7 +41,7 @@
   }
   
   .note-of-rector {
-    width: 50%;
+   
     padding: 60px 10px 10px 30px;
   }
   

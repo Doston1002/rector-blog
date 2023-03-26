@@ -3,15 +3,15 @@ import Rector from "../../../assets/images/Rector.png";
 import './RectorBlog.css'
 const RectorBlog = () => {
   return (
-    <div className="blog-of-rector">
-        <div className="picture-of-rector">
+    <div className="blog-of-rector container lg:flex w-100 ">
+        <div className="picture-of-rector  lg:relative lg:w-1/2 md-w-[100%]">
           <div className="layer-0"></div>
           <div className="layer-1"></div>
           <div className="layer-2">
             <img src={Rector} alt="rectorni rasmi" />
           </div>
         </div>
-        <div className="note-of-rector">
+        <div className="note-of-rector lg:w-1/2 md-w-[100%]">
           <h3>
             "Ta'lim - bu dunyoni o'zgartirish uchun <br /> ishlatishingiz mumkin
             bo'lgan eng kuchli quroldir."
