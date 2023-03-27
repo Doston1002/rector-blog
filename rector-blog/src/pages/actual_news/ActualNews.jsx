@@ -16,11 +16,11 @@ const ActualNews = () => {
   return (
     <div className="w-full">
       <h1 className="container mx-auto w-[90%] my-10 font-semibold text-3xl">
-       {t("Header.actualNews")} wedfwd
+       {t("Header.research")}
       </h1>
 
       <div className="container mx-auto w-[90%] flex justify-between gap-5 lg:flex-row flex-col">
-        <div className="lg:w-9/12 w-full flex flex-col gap-5">
+        <div className="lg:w-10/12 mx-auto w-full flex flex-col gap-5">
           {news
             .filter((item) => item.category === "b")
             .map((subItem) => (
@@ -37,9 +37,7 @@ const ActualNews = () => {
               />
             ))}
         </div>
-        <div className="lg:w-3/12 w-full">
-          <RecommendContent inner={true} url={"news/all"} category={"b"} />
-        </div>
+       
       </div>
     </div>
   );

@@ -9,24 +9,24 @@ const Researcher = () => {
   const { t } = useTranslation();
   return (
     <div className="container w-full mx-auto">
-      <div className="lg:flex items-center lg:justify-between my-5 ">
-        <h3 className="font-semibold lg:text-3xl">
+      <div className="container w-[90%] mx-auto flex items-center justify-between my-5 ">
+        <h3 className="font-semibold lg:text-3xl md:text-2xl sm:text-xl ">
           {t("ResearcherOnline.statistics")}
         </h3>
 
         <Link
-          className="lg:text-2xl"
-          to={`${i18next.language}/virtual-qabulxona`}
+          className="lg:text-2xl text-blue-800"
+          to={`${i18next.language}/virtual-qabulxona `}
         >
           Murojaat yuborish
         </Link>
       </div>
-      <div className="cursor-pointer bg-blue-700 rounded-lg h-36 flex items-center gap-3  justify-center">
+      <div className="cursor-pointer  bg-green-500 rounded-lg h-36 flex items-center gap-3  justify-center">
         <div className="w-[50px] h-[50px] rounded border border-l-pink-50 flex justify-center items-center">
           <Pdf />
         </div>
         <div className="text-black ">
-          <h4 className="text-3xl font-extrabold">8979 +</h4>
+          <h4 className="text-3xl font-extrabold ">8979 +</h4>
           <span> {t("ResearcherOnline.Received")} </span>
         </div>
       </div>

@@ -9,6 +9,7 @@ import {
   LoginRegister,
   ProtectedRoute,
   SkeletonPost,
+  AboutUs,
 } from "./components";
 import {
   Home,
@@ -56,6 +57,18 @@ function App() {
                 ))}
               >
                 <Home />
+              </Suspense>
+            }
+          />
+           <Route
+            path={`:lang/about-us`}
+            element={
+              <Suspense
+                fallback={[...Array(10).keys()].map((i) => (
+                  <SkeletonPost key={i} />
+                ))}
+              >
+                <AboutUs />
               </Suspense>
             }
           />

@@ -24,7 +24,7 @@ const Researcher = () => {
         {t("Researcher.title")}
       </h1>
       <div className="container mx-auto w-[90%] my-10 lg:flex  lg:justify-between lg:gap-10 md:w-  transition-all">
-        <div className="lg:w-[80%] lg:m-auto md:w-full  relative md:block hidden">
+        <div className="lg:w-[80%] lg:m-auto md:w-full sm:w-full  lg:relative ">
           <form className="contactForm" onSubmit={postData}>
             <label className=" ">
               <span className="  text-slate-900">{t("Researcher.FIO")}</span>
@@ -36,8 +36,8 @@ const Researcher = () => {
                 placeholder={t("Researcher.FIO")}
               />
             </label>
-            <div className="mx-auto w-[100%] my-5 flex justify-between gap-10  transition-all">
-              <label className="w-1/2 ">
+            <div className="mx-auto w-[100%] my-5 lg:flex justify-between gap-10  transition-all">
+              <label className="lg:w-1/2 md:w-full ">
                 <span className="  text-slate-900">
                   {t("Researcher.phone")}
                 </span>
@@ -51,7 +51,7 @@ const Researcher = () => {
                 />
               </label>
 
-              <label className="w-1/2">
+              <label className="lg:w-1/2">
                 <span className="text-slate-900">{t("Researcher.email")}</span>
 
                 <input
@@ -109,7 +109,7 @@ const Researcher = () => {
 
             <button
               type="submit"
-              className="rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white bg-sky-600 shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg  focus:border-sky-500 focus:ring-sky-500 active:bg-primary-800 active:shadow-lg float-right mt-2"
+              className="rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white bg-sky-600 shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg  focus:border-sky-500 focus:ring-sky-500 active:bg-primary-800 active:shadow-lg float-right mt-5 my-3 "
             >
               {t("Researcher.send")}
             </button>

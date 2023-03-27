@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Pdf } from "../../assets/icons";
 import {
   LazyLoadImage,
@@ -11,7 +12,7 @@ import { Carusel } from "../../components/slider";
 import ChartImg from "../../assets/images/chart.png";
 import {
   NewsCard,
-  // Researcher,
+  
   RecommendContent,
 } from "../../components";
 
@@ -52,21 +53,28 @@ const Home = () => {
         <Carusel />
       </LazyLoadComponent>
 
-      {/* About Me */}
+   
       <div className="bg-[#F2F2F2]">
         <div className="container mx-auto w-[100%] my-10 flex xl:flex-row flex-col gap-10">
           <RectorBlog />
         </div>
       </div>
-      {/* About Me */}
-
-      {/* Latest News */}
+   
       <div id="news">
-        <h1 className="container mx-auto w-[90%] mt-14 -mb-6 font-semibold text-3xl">
-          {t("Header.news")}
-        </h1>
-        <div className="container mx-auto w-[90%]  gap-5 my-10 lg:flex-row flex-col">
-          <div className=" w-full flex flex-row gap-5 ">
+      <div className="container w-[90%] mx-auto flex items-center justify-between my-5 ">
+        <h3 className="font-semibold lg:text-3xl md:text-2xl sm:text-xl ">
+        {t("Header.news")}
+        </h3>
+
+        <Link
+          className="lg:text-2xl text-blue-700 cursor-pointer"
+          to={`${i18next.language}/latest-news`}
+        >
+          Barchasini ko'rish
+        </Link>
+      </div>
+        <div className="container mx-auto w-[90%]  gap-5 my-10 lg:flex-row md:flex-col md:w-[100%]">
+          <div className="container  mx-auto w-[90%]   lg:flex md:block md:my-3 flex-row gap-5 ">
             {news
               .filter((item) => item.category === "a")
               .slice(0, 3)
@@ -88,24 +96,23 @@ const Home = () => {
                 />
               ))}
           </div>
-          {/* <div className="lg:w-3/12 w-full">
-          <RecommendContent
-            title={t("Header.news")}
-            inner={false}
-            url={"news/all"}
-            category={"a"}
-            ownRoute={`/${i18next.language}/latest-news`}
-          />
-        </div> */}
+         
         </div>
       </div>
-      {/* Latest News */}
-
-      {/* Image Gallary */}
+   
       <div className="container mx-auto w-[90%] my-10">
-        <h1 className=" mt-14 mb-4 font-semibold text-3xl">
-          {t("Header.research")}
-        </h1>
+      <div className=" mx-auto flex items-center justify-between my-5 ">
+        <h3 className="font-semibold lg:text-3xl md:text-2xl sm:text-xl ">
+        {t("Header.research")}
+        </h3>
+
+        <Link
+          className="lg:text-2xl text-blue-700 cursor-pointer"
+          to={`${i18next.language}/actual-news`}
+        >
+          Barchasini ko'rish
+        </Link>
+      </div>
         <div className=" w-full flex flex-col gap-5 ">
           {news
             .filter((item) => item.category === "b")
@@ -127,7 +134,7 @@ const Home = () => {
             ))}
         </div>
       </div>
-      {/* Image Gallary */}
+    
 
       <Chartjs />
     </div>

@@ -18,9 +18,9 @@ const LatestNews = () => {
 
   return (
     <div className="w-full">
-      <h1 className="container mx-auto w-[90%] my-10 font-semibold text-3xl">{t("Header.lastNews")}</h1>
-      <div className="container mx-auto w-[90%] flex justify-between gap-5 lg:flex-row flex-col">
-        <div className="lg:w-9/12 w-full flex flex-col gap-5">
+      <h1 className="container mx-auto w-[90%] my-10 font-semibold text-3xl text-center">{t("Header.news")}</h1>
+      <div className="container mx-auto w-[90%]  gap-5 my-10 lg:flex-row  ">
+        <div className=" lg:flex  md:my-3 lg:flex-row gap-5  flex-wrap ">
           {news
             .filter((item) => item.category === "a")
             .map((subItem) => (
@@ -28,7 +28,7 @@ const LatestNews = () => {
                 key={subItem._id}
                 id={subItem}
                 video={false}
-                inner={true}
+                inner={false}
                 endpoint={subItem._id}
                 category={subItem.category}
                 dateProps={subItem.date}
@@ -37,9 +37,7 @@ const LatestNews = () => {
               />
             ))}
         </div>
-        <div className="lg:w-3/12 w-full">
-          <RecommendContent inner={true} url={"news/all"} category={"a"} />
-        </div>
+        
       </div>
     </div>
   );

@@ -76,21 +76,21 @@ const Navbar = () => {
           </Link>
 
           <Link
-            // to={`${i18next.language}/latest-news`}
+            to={`${i18next.language}/about-us`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
             {t("Header.about")}
           </Link>
           <Link
-            // to={`${i18next.language}/actual-news`}
+            to={`${i18next.language}/latest-news`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
             {t("Header.news")}
           </Link>
           <Link
-            // to={`${i18next.language}/photo-news`}
+            to={`${i18next.language}/actual-news`}
             className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
