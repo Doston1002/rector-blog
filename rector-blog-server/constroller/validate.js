@@ -60,6 +60,7 @@ class Validate{
         email: joi.string().min(5).required(),
         type: joi.string().min(5).required(),
         body: joi.string().min(100).required(),
+        status: joi.string().min(3)
     })
 }
 

@@ -7,6 +7,7 @@ const ApplicationSchema = mongoose.Schema({
   type: String,
   body: String,
   file: String,
+  status: { type: String, default: "pending" },
   date: { type: Date, default: Date.now() },
 });
 

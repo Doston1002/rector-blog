@@ -5,8 +5,8 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "http://localhost:4000/api";
-export const imgPrefix = "http://localhost:4000/";
+export const baseUrl = "http://localhost:5000/api";
+export const imgPrefix = "http://localhost:5000/";
 
 export const UsersProvider = ({ children }) => {
   // Scroll value handled here
@@ -18,7 +18,7 @@ export const UsersProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [media, setMedia] = useState([]);
   const [banner, setBanner] = useState([]);
-  const [photos, setPhotos] = useState([]);
+  const [application, setApplication] = useState([]);
 
   // Action states for UI
   const [isLoading, setIsLoading] = useState(false);
@@ -185,12 +185,12 @@ export const UsersProvider = ({ children }) => {
       ).json();
       data.then((res) => {
         if (res.success) {
-          setPhotos(res.data)
+          setApplication(res.data)
           setIsLoading(false);
         } else {
           setError(true);
           setIsLoading(false);
-          setPhotos([])
+          setApplication([])
         }
       });
       setTimeout(() => {
@@ -223,6 +223,25 @@ export const UsersProvider = ({ children }) => {
       }, 3000); 
     },
 
+    editApplication: async (id, body) => {
+      console.log(body)
+      setIsLoading(true)
+      const res = (
+        await fetch(`${baseUrl}/application/${id}`, { method: "PUT", body, headers:{token: localStorage.getItem("token")} })
+      ).json();
+      // const res = await fetch(`${baseUrl}/application/${id}`, {method: "PUT", body, headers: {token: localStorage.getItem("token")}})
+      res.then((res) => {
+        if (res.success) {
+          setTimeout(() => {
+            setIsLoading(false);
+            setModalClose(true);
+          }, 2000);
+        } else {
+          setError(true)
+        }
+      });
+    },
+
     deleteApplication: async (id) => {
       setIsLoading(true)
       const data = (
@@ -233,8 +252,8 @@ export const UsersProvider = ({ children }) => {
       ).json();
       data.then((res) => {
         if (res.success) {
-          const filteredNews = photos.filter((item) => item._id !== id);
-          setPhotos(filteredNews);
+          const filteredNews = application.filter((item) => item._id !== id);
+          setApplication(filteredNews);
           setIsLoading(false);
           setAlert(true);
         } else {
@@ -271,6 +290,7 @@ export const UsersProvider = ({ children }) => {
         setAlert(false);
       }, 3000);
     },
+
     getNewById: async (id) => {
       setIsLoading(true);
       const data = (
@@ -287,6 +307,7 @@ export const UsersProvider = ({ children }) => {
         }
       });
     },
+
     addNews: async (body, url) => {
       setIsLoading(true);
       const data = (
@@ -459,7 +480,7 @@ export const UsersProvider = ({ children }) => {
         users,
         media,
         banner,
-        photos
+        application
       }}
     >
       {children}

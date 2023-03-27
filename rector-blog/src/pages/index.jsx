@@ -12,7 +12,7 @@ const News = lazy(() => import("./admin/news/News"));
 const Users = lazy(() => import("./admin/users/Users"));
 const Banner = lazy(() => import("./admin/banner/Banner"));
 const Media = lazy(() => import("./admin/media/Media"));
-const Photos = lazy(() => import("./admin/photos/Photos"));
+const Application = lazy(() => import("./admin/application/Application"));
 
 export {
   Home,
@@ -27,5 +27,5 @@ export {
   Users,
   Banner,
   Media,
-  Photos
+  Application
 };

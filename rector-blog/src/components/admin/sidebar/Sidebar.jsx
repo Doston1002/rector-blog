@@ -63,15 +63,15 @@ const Sidebar = () => {
                 <span className="text-gray-100">Media</span>
               </Link>
             </li>
-            {/* <li className="rounded-sm">
+            <li className="rounded-sm">
               <Link
-                to={"photos"}
+                to={"applications"}
                 className="flex items-center p-2 space-x-3 rounded-md"
               >
                 <UsersIcon />
-                <span className="text-gray-100">Foto yangilik</span>
+                <span className="text-gray-100">Arizalar</span>
               </Link>
-            </li> */}
+            </li>
             <li className="rounded-sm">
               <button
                 onClick={() => {

@@ -23,6 +23,8 @@ class ApplicationController {
           tel: value.tel,
           email: value.email,
           body: value.body,
+          type: value.type,
+          status: "pending",
         };
         const Application = new Application_data(obj);
         await Application.save();
@@ -33,6 +35,8 @@ class ApplicationController {
             tel: value.tel,
             email: value.email,
             body: value.body,
+            type: value.type,
+            status: "pending",
           };
           obj.file = `uploads/${i.filename}`;
           const Application = new Application_data(obj);

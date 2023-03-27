@@ -24,7 +24,7 @@ import {
   News,
   Banner,
   Media,
-  Photos,
+  Application,
 } from "./pages";
 
 import { smallActions } from "./context";
@@ -202,14 +202,14 @@ function App() {
             }
           />
           <Route
-            path="photos"
+            path="applications"
             element={
               <Suspense
                 fallback={[...Array(10).keys()].map((i) => (
                   <SkeletonPost key={i} />
                 ))}
               >
-                <Photos />
+                <Application />
               </Suspense>
             }
           />
