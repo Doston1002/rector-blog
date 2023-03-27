@@ -17,7 +17,7 @@ import {
 } from "../../components";
 
 import { imgPrefix } from "../../context/provider";
-import { newsActions, UsersContext } from "../../context";
+import { newsActions, smallActions, UsersContext } from "../../context";
 import RectorBlog from "../../components/rectorBlog/RectorBlog";
 import Chart from "../../components/chart/Chart";
 import Chartjs from "../../components/researcher/Researcher";
@@ -33,7 +33,7 @@ function Accordion({ title, content, isActive, onClick }) {
 
 const Home = () => {
   const { t } = useTranslation();
-  const { news } = useContext(UsersContext);
+  const { news, application } = useContext(UsersContext);
   const [alert, setAlert] = useState(localStorage.getItem("alert"));
 
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -44,6 +44,7 @@ const Home = () => {
 
   useEffect(() => {
     newsActions.getNews("news/all");
+    smallActions.getApplication("application/");
     localStorage.setItem("alert", true);
   }, []);
 
