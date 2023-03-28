@@ -23,7 +23,7 @@ const ShortInfoCard = ({
   const {t} = useTranslation()
   return (
     <Link to={`/${i18next.language}/news/details/${category}/${endpoint}`}>
-      <div className={`flex rounded-xl ${inner ? "gap-5 sm:flex-row flex-col " : "flex-col w-[100%] md:w-56 lg:w-72 xl:w-[380] 2xl:w-[430px]"}`}>
+      <div className={`flex rounded-xl ${inner ? "gap-5 sm:flex-row flex-col rounded-none p-4 shadow-md border border-blue-400 border-y-0 border-l-0 border-r-8" : "flex-col w-[100%] md:w-56 lg:w-72 xl:w-[380] 2xl:w-[430px]"}`}>
         <div className={`relative`}>
           <LazyLoadImage
             src={img}
