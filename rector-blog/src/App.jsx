@@ -134,7 +134,7 @@ function App() {
           />
         </Route>
         <Route
-          path="/egamnazar-dashboard"
+          path="/dashboard"
           element={
             <ProtectedRoute>
               <AdminLayout />
@@ -215,7 +215,7 @@ function App() {
           />
         </Route>
         <Route
-          path="egamnazar-login"
+          path="login"
           element={
             <Suspense
               fallback={[...Array(10).keys()].map((i) => (

@@ -9,5 +9,5 @@ export default function ProtectedRoute({ children }) {
 //   const {globalUrl} = useContext(Context)
 
 //   return token ? <>{children}</> : <Navigate replace to="/login" />;
-  return token ? <>{children}</> : <Navigate replace to="/egamnazar-login" />;
+  return token ? <>{children}</> : <Navigate replace to="/login" />;
 }

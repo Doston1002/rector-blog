@@ -137,7 +137,7 @@ const Home = () => {
       </div>
     
 
-      <Chartjs />
+      {/* <Chartjs /> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
@@ -13,6 +13,7 @@ import { UsersContext } from "../../context";
 const Navbar = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
+  const navigate = useNavigate()
   const { scrollValue } = useContext(UsersContext);
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
@@ -38,14 +39,19 @@ const Navbar = () => {
   };
 
   const changeLanguage = (code) => {
+    let pathnameLang = "uz";
+    if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
+    if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
+    if (pathname.split("/")[1] === "en") pathnameLang = "en";
+    navigate(pathname.replace(pathnameLang, code));
     i18next.changeLanguage(code);
-    window.location.reload();
-    window.location.href = `/`;
   };
   return (
     <header
       className={`py-4 ${
-        scrollValue > 0 || pathname !== "/" ? "bg-blue-800" : "backdrop-blur-2xl"
+        scrollValue > 0 || pathname !== "/"
+          ? "bg-blue-800"
+          : "backdrop-blur-2xl"
       }
        text-white  transition-opacity ${
          pathname === "/" ? "absolute w-full" : ""
@@ -55,7 +61,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between container mx-auto w-[90%]">
         <div className="w-1/6">
           <Link to="/">
-          <h2> </h2>
+            <h2> </h2>
             {/* <img src={logo} alt="" width={"150"} height={"20"} className="" /> */}
           </Link>
         </div>
@@ -71,8 +77,7 @@ const Navbar = () => {
             className="max-xl:block hidden pl-14 -mt-16 mb-14"
             onClick={() => toggleHamburger()}
           >
-            <h1>   Rektor blogi</h1>
-         
+            <h1> Rektor blogi</h1>
           </Link>
 
           <Link
@@ -106,7 +111,7 @@ const Navbar = () => {
           <div className="max-xl:flex gap-4 hidden pl-14 mt-8">
             {" "}
             {language.map((item) => (
-              <button 
+              <button
                 key={item.code}
                 className="bg-[#F2F2F2] text-black rounded p-2"
                 onClick={() => {

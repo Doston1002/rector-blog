@@ -3,6 +3,7 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
 import { smallActions } from "../../context";
+import { baseUrl } from "../../context/provider";
 
 const Researcher = () => {
   const { t } = useTranslation();
@@ -17,9 +18,12 @@ const Researcher = () => {
     formData.append("body", e.target.body.value);
     e.target.file.files[0] && formData.append("file", e.target.file.files[0]);
 
-    smallActions.addApplication(formData, "application/add")
+    fetch(`${baseUrl}/application/add`, {
+      method: "POST",
+    }).then(res => res.json()).then(res => console.log(res))
+    .catch(err => console.log(err))
 
-    confirm("Arizangiz yuborildi"); window.location.reload()
+    confirm("Arizangiz yuborildi"); 
   }
 
   setTimeout(() => {setAlert(false)}, 5000)
@@ -98,7 +102,7 @@ const Researcher = () => {
                 cols="30"
                 required
                 rows="10"
-                minLength={300}
+                minLength={50}
                 className="  mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500  w-full rounded-md sm:text-sm focus:ring-1"
                 placeholder={t("Researcher.applicationTypeDesc")}
               ></textarea>
@@ -110,6 +114,7 @@ const Researcher = () => {
               </span>
 
               <input
+                multiple
                 name="file"
                 type="file"
                 className="  mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500  w-full rounded-md sm:text-sm focus:ring-1"
